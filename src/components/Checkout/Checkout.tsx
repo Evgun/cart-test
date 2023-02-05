@@ -9,7 +9,7 @@ import styles from "./Checkout.module.scss";
 
 const Checkout: FC = () => {
   const { order, isOrderReady } = useSiteCtx();
-
+  console.log(order);
   return (
     <div className={styles.checkout}>
       <h2>Your order</h2>

@@ -5,9 +5,10 @@ import { useSiteCtx } from "ctx/siteCtx";
 import { Cross } from "components/Svg";
 
 const Promo: FC = () => {
-  const [open, setOpen] = useState(false);
-  const [input, setInput] = useState("");
   const { addPromoCode, promoCodes, removePromoCode } = useSiteCtx();
+
+  const [open, setOpen] = useState(promoCodes.length > 0);
+  const [input, setInput] = useState("");
 
   return (
     <div className={cn(styles.promoWrapper, { [styles.active]: open })}>
