@@ -135,10 +135,11 @@ export const useSiteCtxValues = (): SiteCtxProps => {
         subtotal,
         shipping: shipping,
         discount: +(subtotal * (discount / 100)).toFixed(2),
-        total:
+        total: +(
           subtotal +
           (shipping || 0) -
-          +(subtotal * (discount / 100) || 0).toFixed(2),
+          +(subtotal * (discount / 100) || 0).toFixed(2)
+        ).toFixed(2),
       };
 
       setOrder((p) => ({
