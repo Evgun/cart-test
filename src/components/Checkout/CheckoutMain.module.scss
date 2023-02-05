@@ -1,0 +1,95 @@
+@import "scss/exports";
+
+.checkoutWrapper {
+  background-color: #f1eee9;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  header {
+    width: 100%;
+    padding: 48px 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 112px;
+
+    @include tablet {
+      padding: 32px 40px;
+    }
+    @include phone {
+      padding: 24px 32px;
+    }
+
+    h1 {
+      font-family: "CooperBTLight";
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 72px;
+      margin: 0 24px;
+
+      @include tablet {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      @include phone {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 187px;
+      height: 1px;
+    }
+  }
+
+  .mainContent {
+    display: flex;
+    padding: 0 195px;
+    margin-bottom: 153px;
+
+    .leftCol {
+      flex: 1;
+      margin-right: 123px;
+    }
+
+    .rightCol {
+      width: 375px;
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+    padding-bottom: 100px;
+
+    @include tablet {
+      padding-bottom: 50px;
+    }
+    @include phone {
+      padding-bottom: 32px;
+    }
+
+    p {
+      font-family: "NeueHaasUnicaLight";
+      font-size: 18px;
+      line-height: 131.9%;
+      text-align: center;
+      color: #585858;
+      margin-bottom: 9px;
+    }
+
+    svg {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+}

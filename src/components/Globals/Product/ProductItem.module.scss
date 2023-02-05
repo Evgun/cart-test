@@ -1,0 +1,78 @@
+@import "scss/exports";
+
+.productItemWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 7px 15px 7px 0;
+  margin-bottom: 14px;
+  border-bottom: 0.5px dashed #000000;
+
+  .image {
+    width: 95px;
+    margin-right: 24px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .info {
+    flex: 1;
+
+    .header {
+      font-family: "NeueHaasUnicaThin";
+      font-style: normal;
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        font-family: "NeueHaasUnicaLight";
+        font-weight: 350;
+        font-size: 18px;
+        line-height: 13px;
+        color: #000000;
+      }
+    }
+  }
+}
+
+.countEdit {
+  width: 70px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border: 0.5px solid #000000;
+  border-radius: 3px;
+
+  button {
+    width: 33.3%;
+    text-align: center;
+    font-family: "NeueHaasUnicaLight";
+    font-size: 20px;
+
+    @include flexCenter;
+  }
+
+  .count {
+    width: 33.3%;
+    text-align: center;
+    border-left: 0.5px solid #afafaf;
+    border-right: 0.5px solid #afafaf;
+    user-select: none;
+
+    font-family: "NeueHaasUnicaRegular";
+    font-size: 15px;
+    line-height: 1px;
+
+    @include flexCenter;
+  }
+}

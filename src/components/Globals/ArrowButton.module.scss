@@ -1,0 +1,63 @@
+.buttonContainer {
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    svg path {
+      fill: #000;
+    }
+
+    p {
+      color: #fff;
+    }
+  }
+
+  &.black {
+    svg path {
+      fill: #000;
+    }
+
+    p {
+      font-family: "NeueHaasUnicaRegular";
+      color: #fff;
+      font-size: 30px;
+    }
+
+    &:hover {
+      svg path {
+        fill: #fff;
+      }
+
+      p {
+        color: #000;
+      }
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  svg {
+    width: 100%;
+    height: 56px;
+
+    path {
+      transition: 0.3s fill;
+    }
+  }
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    white-space: nowrap;
+    transition: 0.3s color;
+  }
+}

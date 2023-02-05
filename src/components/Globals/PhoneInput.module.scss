@@ -1,0 +1,52 @@
+.flagContainer {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: block;
+    width: 24px !important;
+    height: 14px !important;
+    margin-right: 11px;
+    margin-top: -6px;
+  }
+}
+
+.phoneInputWrapper {
+  position: relative;
+  .controlsContainer {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #000;
+
+    .selectContainer {
+      min-width: 131px;
+      margin-bottom: -1px;
+    }
+
+    input {
+      min-width: 1px;
+      flex: 1;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+
+      font-family: "NeueHaasUnicaRegular";
+      font-style: normal;
+      font-size: 25px;
+      line-height: 38px;
+      text-align: center;
+      color: #000000;
+    }
+  }
+
+  .placeholder {
+    font-family: "NeueHaasUnicaLight";
+    font-size: 20px;
+    position: absolute;
+    left: 8px;
+    bottom: -5px;
+    transform: translateY(100%);
+    color: #606060;
+  }
+}

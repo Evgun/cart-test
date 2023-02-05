@@ -1,0 +1,46 @@
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 38px;
+
+  input,
+  .textarea {
+    width: 100%;
+    min-height: 38px;
+    background-color: transparent;
+    padding: 0px 8px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+
+    font-family: "NeueHaasUnicaRegular";
+    font-size: 25px;
+    line-height: 38px;
+    color: #424141;
+
+    word-break: break-word;
+  }
+
+  .placeholder {
+    font-family: "NeueHaasUnicaLight";
+    font-size: 25px;
+    line-height: 38px;
+
+    position: absolute;
+    left: 8px;
+    bottom: calc(50% - 2px);
+    transform: translateY(50%);
+    color: #606060;
+    transition: 0.4s bottom, 0.4s transform, 0.4s font-size;
+    z-index: 2;
+
+    user-select: none;
+    pointer-events: none;
+
+    &.inactive {
+      bottom: 0;
+      transform: translateY(100%);
+      font-size: 20px;
+    }
+  }
+}

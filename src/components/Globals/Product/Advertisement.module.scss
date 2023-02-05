@@ -1,0 +1,64 @@
+@import "scss/exports";
+
+.advertisementWrapper {
+  background: #fffbec;
+  border: 1px solid #9e9e9e;
+  border-radius: 9px;
+  padding: 16px 8px;
+
+  .header {
+    font-family: "NeueHaasUnicaBold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .content {
+    display: flex;
+    .image {
+      width: 162px;
+      margin-right: 18px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: top;
+      }
+    }
+
+    .info {
+      flex: 1;
+
+      .description {
+        font-family: "NeueHaasUnicaThin";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 11px;
+
+        @include clipLines(3);
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        font-family: "NeueHaasUnicaLight";
+        font-style: normal;
+        font-size: 18px;
+        line-height: 25px;
+
+        .fullPrice {
+          font-family: "NeueHaasUnicaThin";
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}

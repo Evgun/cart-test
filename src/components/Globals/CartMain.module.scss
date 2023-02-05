@@ -1,0 +1,112 @@
+@import "scss/exports";
+
+.cart {
+  svg {
+    path {
+      transition: 0.3s stroke;
+    }
+  }
+  &:hover {
+    svg path {
+      stroke: grey;
+    }
+  }
+}
+
+.modalContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 375px;
+  height: 100%;
+  background-color: #fff;
+  transition: 1s transform;
+  transform: translateX(100%);
+  padding: 60px 12px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  .modalHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .cross {
+      margin-right: auto;
+
+      svg path {
+        transition: 0.3s fill;
+      }
+
+      &:hover {
+        svg path {
+          fill: grey;
+        }
+      }
+    }
+
+    p {
+      font-family: $Cooper;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 42px;
+      margin-right: auto;
+    }
+  }
+
+  .nothing {
+    width: 236px;
+    align-self: center;
+    text-align: center;
+
+    font-family: "NeueHaasUnicaLight";
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .mainContent {
+    overflow-y: auto;
+    margin-bottom: 20px;
+    margin-right: -10px;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #b7b7b7;
+      border-radius: 4px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background-color: #404040;
+      border-radius: 4px;
+      transition: 0.3s background-color;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #000;
+      border-radius: 4px;
+    }
+  }
+
+  .checkout {
+    width: 100%;
+    margin-top: auto;
+
+    .splitter {
+      margin-bottom: 27px;
+    }
+  }
+}

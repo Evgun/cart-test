@@ -1,0 +1,37 @@
+.clientInfoWrapper {
+  margin-bottom: 59px;
+
+  h2 {
+    font-family: "NeueHaasUnicaMedium";
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 13px;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -19px -54px;
+
+    .full {
+      width: 100%;
+      padding: 0 19px;
+      margin-bottom: 54px;
+    }
+
+    .half {
+      width: 50%;
+      padding: 0 19px;
+      margin-bottom: 54px;
+
+      .description {
+        font-family: "NeueHaasUnicaLight";
+        font-style: normal;
+        font-size: 18px;
+        line-height: 131.9%;
+        color: #585858;
+      }
+    }
+  }
+}

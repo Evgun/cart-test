@@ -1,0 +1,109 @@
+.delivery {
+  margin-bottom: 24px;
+
+  h2 {
+    font-family: "NeueHaasUnicaMedium";
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 22px;
+  }
+
+  .controls {
+    .country {
+      width: 50%;
+      margin-bottom: 63px;
+    }
+
+    .address {
+      margin-bottom: 84px;
+    }
+
+    .shipping {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      label {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px dashed #000000;
+        padding: 6px;
+
+        input {
+          width: 24px;
+          height: 24px;
+          margin-right: 18px;
+          accent-color: #000;
+        }
+
+        span {
+          font-family: "NeueHaasUnicaRegular";
+          font-style: normal;
+          font-size: 25px;
+          line-height: 38px;
+          color: #424141;
+          margin-top: 6px;
+
+          &:last-child {
+            margin-left: auto;
+          }
+        }
+      }
+
+      button {
+        align-self: flex-end;
+
+        font-family: "NeueHaasUnicaLight";
+        font-size: 20px;
+        line-height: 10px;
+        text-decoration-line: underline;
+        color: #4b4b4b;
+        transition: 0.3s color;
+
+        margin-top: 11px;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.shippingModal {
+  .modalContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #fff;
+    border-radius: 9px;
+
+    padding: 40px;
+
+    .cross {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+
+      svg path {
+        transition: 0.3s fill;
+      }
+
+      &:hover {
+        svg path {
+          fill: grey;
+        }
+      }
+    }
+
+    .info {
+      font-family: "NeueHaasUnicaRegular";
+      font-style: normal;
+      font-size: 25px;
+      line-height: 38px;
+    }
+  }
+}

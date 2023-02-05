@@ -1,0 +1,23 @@
+.checkout {
+  width: 100%;
+
+  h2 {
+    font-family: "NeueHaasUnicaMedium";
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 17px;
+  }
+
+  .cartItems {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #9e9e9e;
+    border-radius: 9px;
+    margin-bottom: 23px;
+    padding: 30px 20px;
+  }
+
+  .splitter {
+    margin-bottom: 23px;
+  }
+}

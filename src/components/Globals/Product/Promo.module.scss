@@ -1,0 +1,144 @@
+@import "scss/exports";
+
+.promoWrapper {
+  position: relative;
+  margin-bottom: 20px;
+
+  &.active {
+    .promoInput {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .enter {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .promoInput {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s opacity;
+
+    .controls {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 15px;
+
+      input {
+        width: auto;
+        flex: 1;
+        font-family: "NeueHaasUnicaLight";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        border: 1px solid #a0a0a0;
+        border-radius: 2px;
+        padding: 7px;
+        margin-right: 15px;
+        transition: 0.3s border-color;
+        outline: none;
+
+        &:focus {
+          border-color: #000;
+        }
+
+        @include placeholderColor(#000);
+      }
+
+      button {
+        @include flexCenter;
+
+        background: #f1eee9;
+        border: 1px solid #a0a0a0;
+        border-radius: 4px;
+        padding: 5px 20px;
+
+        span {
+          font-family: "NeueHaasUnicaMedium";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      overflow: scroll;
+      align-items: center;
+
+      &::-webkit-scrollbar {
+        display: none;
+        opacity: 0;
+      }
+
+      .promoCode {
+        display: flex;
+        align-items: center;
+        background: #f1eee9;
+        border-radius: 12px;
+        padding: 4px 10px 0;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+
+        p {
+          font-family: "NeueHaasUnicaLight";
+          font-weight: 350;
+          font-size: 14px;
+          text-transform: uppercase;
+          margin-right: 10px;
+        }
+
+        button {
+          width: 12px;
+          height: 12px;
+          margin-bottom: 4px;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .enter {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s opacity;
+
+    p {
+      font-family: "NeueHaasUnicaLight";
+      font-style: normal;
+      font-size: 18px;
+      line-height: 25px;
+      margin-right: 6px;
+    }
+
+    button {
+      font-family: "NeueHaasUnicaThin";
+      font-style: normal;
+      font-size: 18px;
+      line-height: 25px;
+      color: #777777;
+      text-decoration: underline;
+      transition: 0.3 color;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}

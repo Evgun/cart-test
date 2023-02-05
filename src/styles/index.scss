@@ -1,0 +1,12 @@
+@import "./reset";
+@import "./fonts";
+@import "../scss/exports";
+
+button {
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}

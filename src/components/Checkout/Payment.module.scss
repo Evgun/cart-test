@@ -1,0 +1,35 @@
+.payment {
+  width: 100%;
+
+  h2 {
+    font-family: "NeueHaasUnicaMedium";
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 9px;
+  }
+
+  .details {
+    width: 100%;
+
+    background: #f8f8f8;
+    border: 1px solid #000000;
+    border-radius: 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    button {
+      padding: 4px;
+      text-align: left;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #000;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
