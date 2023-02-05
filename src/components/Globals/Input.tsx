@@ -1,21 +1,30 @@
 import cn from "classnames";
-import { FC, useState } from "react";
+import { FC, useRef, useState } from "react";
 import styles from "./Input.module.scss";
 
 type InputProps = {
   handler: (e: string) => void;
   placeholder: string;
   wrapText?: boolean;
+  clearButton?: boolean;
 };
 
-const Input: FC<InputProps> = ({ handler, placeholder, wrapText = false }) => {
+const Input: FC<InputProps> = ({
+  handler,
+  placeholder,
+  wrapText = false,
+  clearButton = false,
+}) => {
   const [isActive, setIsActive] = useState(false);
   const [hasContent, setHasContent] = useState(false);
+
+  const clearRef = useRef<HTMLInputElement>(null);
 
   return (
     <div className={styles.inputWrapper}>
       {wrapText ? (
         <div
+          ref={clearRef}
           className={styles.textarea}
           contentEditable
           onInput={(e) => {
@@ -37,6 +46,7 @@ const Input: FC<InputProps> = ({ handler, placeholder, wrapText = false }) => {
         />
       ) : (
         <input
+          ref={clearRef}
           type="text"
           onChange={(e) => {
             handler(e.target.value);
@@ -51,7 +61,6 @@ const Input: FC<InputProps> = ({ handler, placeholder, wrapText = false }) => {
           onBlur={() => setIsActive(false)}
         />
       )}
-
       <p
         className={cn(styles.placeholder, {
           [styles.inactive]: isActive || hasContent,
@@ -59,6 +68,22 @@ const Input: FC<InputProps> = ({ handler, placeholder, wrapText = false }) => {
       >
         {placeholder}
       </p>
+
+      {clearButton && (
+        <button
+          onClick={() => {
+            handler("");
+            setHasContent(false);
+
+            if (clearRef.current) {
+              clearRef.current.innerHTML = "";
+              clearRef.current.value = "";
+            }
+          }}
+        >
+          change
+        </button>
+      )}
     </div>
   );
 };

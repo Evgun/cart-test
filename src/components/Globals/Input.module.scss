@@ -43,4 +43,22 @@
       font-size: 20px;
     }
   }
+
+  button {
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+    transform: translateY(100%);
+
+    font-family: "NeueHaasUnicaLight";
+    font-size: 20px;
+    line-height: 10px;
+    text-decoration-line: underline;
+    color: #4b4b4b;
+    transition: 0.3s color;
+
+    &:hover {
+      color: #000;
+    }
+  }
 }

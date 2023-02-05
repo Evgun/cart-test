@@ -1,3 +1,5 @@
+@import "scss/exports";
+
 .clientInfoWrapper {
   margin-bottom: 59px;
 
@@ -24,6 +26,10 @@
       width: 50%;
       padding: 0 19px;
       margin-bottom: 54px;
+
+      @include tablet {
+        width: 100%;
+      }
 
       .description {
         font-family: "NeueHaasUnicaLight";

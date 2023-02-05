@@ -92,6 +92,7 @@ const DeliveryMain: FC = () => {
             handler={updateAddress}
             placeholder="delivery address"
             wrapText={true}
+            clearButton
           />
         </div>
         <div className={styles.shipping}>
